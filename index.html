@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>телефонная книга</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1 id="title">Список контактов телефона</h1>
+            
+            <form id="headFrm">    
+                <div id="ss">                          
+                <p class="pp">Поиск среди контактов:</p>
+                
+                
+                <input type="radio" id="searchBy1" name="name1">
+                <label for="searchBy1">        Имя     </label>
+                <input type="radio" id="searchBy2" name="name1">              
+                <label for="searchBy2">         Номер      </label>
+                
+                    
+              
+            </div>
+                <input type="text" name="search" id="searchContact" placeholder="введите..."required></br></br>
+            </form>
+        </header>
+
+        <main>
+            <h2>Добавить новый контакт</h2>
+            <form id="frm" name="info" >
+                </br>
+                <input  type="text" name="contactName" class="addContact" id="name" placeholder="ВВЕДИТЕ ИМЯ" ></br></br>
+                <input  type="tel" name="contactNo"  class="addContact" id="phone" placeholder="ВВЕДИТЕ ТЕЛЕФОН" ></br></br>
+                <input type="submit" value="добавить" id="addCont" name="go">
+                <p style="color:red;font-style:italic;font-size:25px;display: none;"> Недостаточно инфорамции..</p>
+            </form>
+        </br>
+            <table id='contacts'>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Телефон</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbdy">
+                    <tr id="contInfo" >
+                        
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </main>
+    </div>
+    <div id="popup">
+        <p> Ваш номер телефона не действителен</p>
+        <p>Убедитесь что вы используете формат телефона - "89ХХХХХХХХХ"</p>
+        <button type="button" id="ok">OK</button>
+    </div>
+    <div id="confirm">
+            <p>Вы уверены, что хотите удалить этот контакт?</p>
+            <button type="button" id="yesbtn">ДА</button>
+            <button type="button" id="nobtn">НЕТ</button>
+    </div>
+    <div id="existsup">
+        <p>Введенный вами номер телефона уже существует</p>
+        <button type="button" id="eok">OK</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
